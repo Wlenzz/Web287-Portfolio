@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.25),transparent),url(../imagez/background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 1% 1% 1% 1%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.icon1 {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    padding-right: 1%;
+}
+.icon2 {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    padding-right: 1%;
+}
+
+.logo {
+    width: 300px;
+    height: 75px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 1%;
+}
+
+nav ul {
+    flex: 1;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 25px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+/* line effect in nav links, width trans*/
+nav ul li a::after{
+content: '';
+width: 0; 
+height: 3px;
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%);
+background: greenyellow;
+transition: width 0.2s;
+}
+nav ul li a:hover::after {
+    width: 50%;
+}
+/* Intro text effects*/
+
+.site-intro{
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+    
+}
+.site-intro p{
+    font-size: 55px;
+    font-weight: 550;
+    padding-left: 2%;
+    text-shadow: 0.5px 1px navy;
+}
+.site-intro h1{
+    font-size: 125px;
+    line-height: 125px;
+    margin-left: 5px;
+    text-shadow: 0.5px 1px navy;
+}
+.site-intro h3{
+    font-size: 45px;
+    font-weight: 450;
+    padding-left: 2%;
+    line-height: 60px;
+}
+span{
+    line-height: 45px;
+    font-size: 25px;
+    padding-top: 15px;
+    margin-left: 2.5px;
+}
+.site-intro a{
+    text-decoration: none;
+    color: green;
+}
+.site-intro .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-left: 2%;
+}
+.site-intro a{
+    color: #fff;
+    text-decoration: none; /*creates border around links- a href */
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid greenyellow;
+   
+}
+.site-intro a span {
+    font-size: 23px;
+    line-height: 10px;
+    margin-left: 5px;
+}
+
+.media-icons{
+    position: absolute;
+    right: 2%;
+    bottom: 6%;
+}
+.media-icons img{
+    width: 40px;
+    display: inline;
+    margin: 0px 5px 5px 10px; /* top rite bttm left */
+}
+.img4 {
+    margin-right: 0px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1300px) {
+    nav ul li {
+        font-size: 23px;
+        margin: 5px 15px;
+    }
+    .icon1 {
+        width: 75px;
+        height: 75px;
+    }
+    .icon2 {
+        width: 75px;
+        height: 75px;
+    }
+    .site-intro{
+        bottom: 5%;
+    }
+    .site-intro p{
+        font-size: 35px;
+    }
+    .site-intro h1{
+        font-size: 75px;
+        line-height: 105px;
+    }
+    .site-intro h3{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    span{
+        line-height: 35px;
+        font-size: 17px;
+    }
+    .media-icons{
+        bottom: 5%;
+    }
+    .media-icons img{
+        width: 35px;
+    }
+}
+@media screen and (max-width: 720px) {
+    nav ul li {
+        font-size: 15px;
+        margin: 5px 15px;
+    }
+    i {
+        width: 60px;
+        height: 60px; 
+        color: aliceblue;
+    }
+    .icon1 {
+        width: 60px;
+        height: 60px;
+    }
+    .icon2 {
+        width: 65px;
+        height: 65px;
+    }
+    .site-intro{
+        bottom: 3%;
+    }
+    .site-intro p{
+        font-size: 25px;
+    }
+    .site-intro h1{
+        font-size: 55px;
+        line-height: 90px;
+    }
+    .site-intro h3{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .site-intro a span {
+        font-size: 15px;
+        line-height: 10px;
+        margin-left: 5px;
+    }
+    .site-intro a{
+        padding: 5px 10px;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+    span{
+        line-height: 25px;
+        font-size: 10px;
+    }
+    .media-icons{
+        bottom: 3%;
+    }
+    .media-icons img{
+        width: 25px;
+    }
+    
+}
+@media screen and (max-width: 536px) and (min-width: 480px) {
+    .icon1 {
+       display: none;
+    }
+    .icon2 {
+        width: 65px;
+        height: 65px;
+    }
+    .site-intro{
+        bottom: 3%;
+    }
+    .site-intro p{
+        font-size: 20px;
+    }
+    .site-intro h1{
+        font-size: 45px;
+        line-height: 75px;
+    }
+    .site-intro h3{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .site-intro a span {
+        font-size: 12px;
+        line-height: 10px;
+        margin-left: 2px;
+    }
+    .site-intro a{
+        padding: 3px 5px;
+        margin-right: 15px;
+        font-size: 12px;
+    }
+    span{
+        line-height: 20px;
+        font-size: 8px;
+    }
+    .media-icons{
+        bottom: 1%;
+    }
+    .media-icons img{
+        width: 23px;
+    }
+}
